@@ -27,10 +27,10 @@ public class WebUntisService {
     private ScheduledExecutorService lessonNotifierService;
     private List<RoomTimetable> roomTimetables;
 
-    public WebUntisService() throws MqttException {
+    public WebUntisService(String mqttServer) throws MqttException {
         lastImportTime = null;
         webUntisClient = new WebUntisClient("mese", "htbla linz leonding", "if150152", "teamtengu1");
-        mqttClient = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId(), null);
+        mqttClient = new MqttClient(mqttServer, MqttClient.generateClientId(), null);
         updateCheckerService = Executors.newScheduledThreadPool(1);
         lessonNotifierService = Executors.newScheduledThreadPool(1);
         webUntisClient.login();
@@ -83,7 +83,7 @@ public class WebUntisService {
 
                 Lesson lesson = lessons
                         .stream()
-                        .filter(x -> x.getStartTime() >= time && time <= x.getEndTime())
+                        .filter(x -> x.getStartTime() <= time && time <= x.getEndTime())
                         .findFirst()
                         .orElse(null);
 
@@ -123,6 +123,6 @@ public class WebUntisService {
     }
 
     private LocalDateTime getCurrentLocalDateTime(){
-        return LocalDateTime.now().plusDays(5);
+        return LocalDateTime.now();
     }
 }

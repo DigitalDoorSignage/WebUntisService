@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) throws MqttException, InterruptedException {
-        new WebUntisService().start();
+        new WebUntisService("tcp://192.168.137.218:1883").start();
         //TODO: display the data in a nice layout on the epaper
     }
 }
