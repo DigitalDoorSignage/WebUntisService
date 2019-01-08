@@ -5,13 +5,16 @@ import at.htl.webuntis.WebUntisClient;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -21,33 +24,52 @@ public class WebUntisService {
     private Long lastImportTime;
     private WebUntisClient webUntisClient;
     private MqttClient mqttClient;
+    private MqttConnectOptions mqttConnectOptions;
     // this service is responsible for checking the webuntis api for updates and calls the #loadTimetables function if there are any
     private ScheduledExecutorService updateCheckerService;
     // this service is responsible for publishing a message under the right topic when the lesson changes
     private ScheduledExecutorService lessonNotifierService;
-    private List<RoomTimetable> roomTimetables;
+    // this map holds all current roomtimetables
+    private Map<String, RoomTimetable> roomTimetables;
+    // this list holds the roomtimetables that got changed with the latest updates
+    private List<RoomTimetable> roomTimetablesDiff;
 
     public WebUntisService(String mqttServer) throws MqttException {
         lastImportTime = null;
         webUntisClient = new WebUntisClient("mese", "htbla linz leonding", "if150152", "teamtengu1");
+        webUntisClient.login();
+
         mqttClient = new MqttClient(mqttServer, MqttClient.generateClientId(), null);
+        mqttConnectOptions = new MqttConnectOptions();
+        mqttConnectOptions.setAutomaticReconnect(true);
+        mqttClient.connect(mqttConnectOptions);
+
         updateCheckerService = Executors.newScheduledThreadPool(1);
         lessonNotifierService = Executors.newScheduledThreadPool(1);
-        webUntisClient.login();
-        mqttClient.connect();
     }
 
     public void loadTimetables(){
-        roomTimetables = webUntisClient
-                .getAllRooms()
-                .stream()
-                .map(r -> webUntisClient.getTimetableOfRoom(r, getCurrentLocalDateTime().toLocalDate()))
-                .collect(Collectors.toList());
+        Map<String, RoomTimetable> newRoomTimetables = new HashMap<>();
+        this.roomTimetablesDiff = new ArrayList<>();
+
+        webUntisClient
+                 .getAllRooms()
+                 .stream()
+                 .map(r -> webUntisClient.getTimetableOfRoom(r, getCurrentLocalDateTime().toLocalDate()))
+                 .forEach(r -> {
+                     String name = r.getRoom().getLongName();
+                     newRoomTimetables.put(name, r);
+                     if(this.roomTimetables == null || !r.equals(this.roomTimetables.get(name))){
+                         this.roomTimetablesDiff.add(r);
+                     }
+                 });
+
+        this.roomTimetables = newRoomTimetables;
     }
 
     public void start(){
         updateCheckerService.scheduleAtFixedRate(this::checkForUpdate, 0, 2, TimeUnit.MINUTES);
-        lessonNotifierService.scheduleAtFixedRate(this::notifyLessons, 0, 1, TimeUnit.MINUTES);
+        lessonNotifierService.scheduleAtFixedRate(this::notifyLessons, 0, 20, TimeUnit.SECONDS);
     }
 
     private void checkForUpdate(){
@@ -73,7 +95,7 @@ public class WebUntisService {
             LocalDateTime now = getCurrentLocalDateTime();
             String dateString = now.format(DateTimeFormatter.ofPattern("YYYYMMdd"));
             int time = now.getHour() * 100 + now.getMinute();
-            for(RoomTimetable roomTimetable : roomTimetables){
+            for(RoomTimetable roomTimetable : roomTimetablesDiff){
                 List<Lesson> lessons = roomTimetable
                         .getLessonsPerDay()
                         .get(dateString);
@@ -103,12 +125,12 @@ public class WebUntisService {
                 }
                 else {
                     Subject subject = lesson.getSubject();
-                    Teacher teacher = lesson.getTeacher();
+                    List<Teacher> teachers = lesson.getTeachers();
                     Klass klass = lesson.getKlass();
 
                     messageContent = new ObjectMapper().createObjectNode()
                             .put("subject", subject == null? "-" : subject.getName())
-                            .put("teacher", teacher == null? "-" : teacher.getShortName())
+                            .put("teacher", teachers.size() == 0? "-" : teachers.stream().map(t -> t.getShortName()).collect(Collectors.joining(", ")))
                             .put("class", klass == null? "-" : klass.getName())
                             .put("room", room.getLongName());
                 }
@@ -123,6 +145,6 @@ public class WebUntisService {
     }
 
     private LocalDateTime getCurrentLocalDateTime(){
-        return LocalDateTime.now();
+        return LocalDateTime.now().plusDays(2);
     }
 }

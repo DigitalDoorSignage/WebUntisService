@@ -2,10 +2,7 @@ package at.htl.webuntis.entity;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class RoomTimetable {
     private Room room;
@@ -34,6 +31,7 @@ public class RoomTimetable {
         List<Teacher> teachers = new ArrayList<>();
         List<Subject> subjects = new ArrayList<>();
         List<Klass> klasses = new ArrayList<>();
+        List<Room> rooms = new ArrayList<>();
         Map<String, List<Lesson>> lessonsPerDay = new HashMap<>();
 
         for (JsonNode jsonNode : elements) {
@@ -48,11 +46,16 @@ public class RoomTimetable {
                 case Subject.TYPE:
                     subjects.add(Subject.parse(jsonNode));
                     break;
+                case Room.TYPE:
+                    rooms.add(Room.parse(jsonNode));
+                    break;
             }
         }
 
+
+
         for(JsonNode jsonNode : elementPeriods){
-            Lesson lesson = Lesson.parse(jsonNode, room, teachers, subjects, klasses);
+            Lesson lesson = Lesson.parse(jsonNode, room, rooms, teachers, subjects, klasses);
             if(!lessonsPerDay.containsKey(lesson.getDate()))
                 lessonsPerDay.put(lesson.getDate(), new ArrayList<Lesson>());
             lessonsPerDay.get(lesson.getDate()).add(lesson);
@@ -83,5 +86,36 @@ public class RoomTimetable {
 
     public Map<String, List<Lesson>> getLessonsPerDay() {
         return lessonsPerDay;
+    }
+
+    private boolean lessonsPerDayEquals(Map<String, List<Lesson>> other){
+        for(Map.Entry<String, List<Lesson>> lessonsPerDay : this.lessonsPerDay.entrySet()){
+            String date = lessonsPerDay.getKey();
+            List<Lesson> lessons = lessonsPerDay.getValue();
+            List<Lesson> otherLessons = other.get(date);
+
+            if(lessons.size() != otherLessons.size())
+                return false;
+
+            for (int i = 0; i < lessons.size(); i++) {
+                if(!lessons.get(i).equals(otherLessons.get(i)))
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RoomTimetable that = (RoomTimetable) o;
+        return Objects.equals(room, that.room) &&
+                lessonsPerDayEquals(that.lessonsPerDay);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(room, lessonsPerDay);
     }
 }
