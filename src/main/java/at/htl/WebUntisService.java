@@ -145,6 +145,6 @@ public class WebUntisService {
     }
 
     private LocalDateTime getCurrentLocalDateTime(){
-        return LocalDateTime.now().plusDays(2);
+        return LocalDateTime.now();
     }
 }
