@@ -11,6 +11,6 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws MqttException, IOException {
-        new WebUntisService("tcp://localhost:1883");
+        new WebUntisService("tcp://localhost:1883").start();
     }
 }
