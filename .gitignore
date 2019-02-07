@@ -158,3 +158,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/java,linux,maven,windows,intellij
+
+config.yaml

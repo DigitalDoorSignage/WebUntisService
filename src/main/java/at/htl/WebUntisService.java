@@ -8,7 +8,13 @@ import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.yaml.snakeyaml.Yaml;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -34,9 +40,17 @@ public class WebUntisService {
     // this list holds the roomtimetables that got changed with the latest updates
     private List<RoomTimetable> roomTimetablesDiff;
 
-    public WebUntisService(String mqttServer) throws MqttException {
+    public WebUntisService(String mqttServer) throws MqttException, FileNotFoundException {
         lastImportTime = null;
-        webUntisClient = new WebUntisClient("mese", "htbla linz leonding", "if150152", "teamtengu1");
+        Map<String, Object> config = new Yaml().load(
+                new FileInputStream(Paths.get("config.yaml").toFile())
+        );
+        webUntisClient = new WebUntisClient(
+                "mese",
+                "htbla linz leonding",
+                (String) config.get("username"),
+                (String) config.get("password")
+        );
         webUntisClient.login();
 
         mqttClient = new MqttClient(mqttServer, MqttClient.generateClientId(), null);
@@ -145,6 +159,6 @@ public class WebUntisService {
     }
 
     private LocalDateTime getCurrentLocalDateTime(){
-        return LocalDateTime.now().plusDays(2);
+        return LocalDateTime.now();
     }
 }
