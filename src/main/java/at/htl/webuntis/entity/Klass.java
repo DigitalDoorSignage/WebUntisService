@@ -2,6 +2,8 @@ package at.htl.webuntis.entity;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
+import java.util.Objects;
+
 public class Klass {
     public final static int TYPE = 1;
     private int id;
@@ -10,6 +12,10 @@ public class Klass {
     public Klass(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Klass(){
+
     }
 
     public static Klass parse(JsonNode jsonNode) {
@@ -25,5 +31,19 @@ public class Klass {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Klass klass = (Klass) o;
+        return id == klass.id &&
+                Objects.equals(name, klass.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
     }
 }

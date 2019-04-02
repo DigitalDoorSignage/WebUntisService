@@ -1,7 +1,13 @@
 package at.htl.webuntis.entity;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import javax.json.Json;
+import javax.json.JsonArrayBuilder;
+import javax.json.JsonObject;
+import javax.json.JsonObjectBuilder;
 import java.util.*;
 
 public class RoomTimetable {
@@ -19,6 +25,10 @@ public class RoomTimetable {
         this.klasses = klasses;
         this.lessonsPerDay = lessonsPerDay;
         this.lastImportTimestamp = lastImportTimestamp;
+    }
+
+    public RoomTimetable(){
+
     }
 
     public static RoomTimetable parse(Room room, JsonNode body) {
@@ -88,7 +98,7 @@ public class RoomTimetable {
         return lessonsPerDay;
     }
 
-    private boolean lessonsPerDayEquals(Map<String, List<Lesson>> other){
+    boolean lessonsPerDayEquals(Map<String, List<Lesson>> other){
         for(Map.Entry<String, List<Lesson>> lessonsPerDay : this.lessonsPerDay.entrySet()){
             String date = lessonsPerDay.getKey();
             List<Lesson> lessons = lessonsPerDay.getValue();
@@ -117,5 +127,15 @@ public class RoomTimetable {
     @Override
     public int hashCode() {
         return Objects.hash(room, lessonsPerDay);
+    }
+
+    public String toJson(){
+        try {
+            return new ObjectMapper().writeValueAsString(this);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }

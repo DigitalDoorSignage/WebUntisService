@@ -27,6 +27,9 @@ public class Lesson {
         this.klass = klass;
     }
 
+    public Lesson() {
+    }
+
     public static Lesson parse(JsonNode jsonNode, Room room, List<Room> rooms, List<Teacher> teachers, List<Subject> subjects, List<Klass> klasses) {
         JsonNode elements = jsonNode.get("elements");
         List<Teacher> lessonTeachers = new ArrayList<>();
@@ -102,9 +105,21 @@ public class Lesson {
                 endTime == lesson.endTime &&
                 Objects.equals(date, lesson.date) &&
                 Objects.equals(room, lesson.room) &&
-                Objects.equals(teachers, lesson.teachers) &&
+                hasSameTeachers(lesson.teachers) &&
                 Objects.equals(subject, lesson.subject) &&
                 Objects.equals(klass, lesson.klass);
+    }
+
+    private boolean hasSameTeachers(List<Teacher> others){
+        if(teachers.size() != others.size())
+            return false;
+
+        for(int i = 0; i < teachers.size(); i++){
+            if(!teachers.get(i).equals(others.get(i)))
+                return false;
+        }
+
+        return true;
     }
 
     @Override

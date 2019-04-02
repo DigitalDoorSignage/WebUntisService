@@ -16,6 +16,9 @@ public class Room {
         this.longName = longName;
     }
 
+    public Room() {
+    }
+
     public static Room parse(JsonNode roomJson) {
         return new Room(
                 roomJson.get("id").asInt(),

@@ -10,10 +10,9 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.yaml.snakeyaml.Yaml;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import javax.json.Json;
+import java.io.*;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -82,7 +81,7 @@ public class WebUntisService {
     }
 
     public void start(){
-        updateCheckerService.scheduleAtFixedRate(this::checkForUpdate, 0, 2, TimeUnit.MINUTES);
+        updateCheckerService.scheduleAtFixedRate(this::checkForUpdate, 0, 30, TimeUnit.SECONDS);
         lessonNotifierService.scheduleAtFixedRate(this::notifyLessons, 0, 20, TimeUnit.SECONDS);
     }
 
