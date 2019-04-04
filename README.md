@@ -7,3 +7,6 @@ Java SE Application that periodically checks the webuntis api for updates and ma
     * break begins
     * update timestamp of webuntis changes
     * new lesson begins
+    
+## Different ways we can do initial synchronization
+
