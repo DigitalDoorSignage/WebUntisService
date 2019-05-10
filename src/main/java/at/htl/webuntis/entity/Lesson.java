@@ -1,7 +1,9 @@
 package at.htl.webuntis.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.JsonNode;
 
+import javax.json.bind.annotation.JsonbTransient;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -11,6 +13,7 @@ public class Lesson {
     private String date;
     private int startTime;
     private int endTime;
+    @JsonIgnore
     private Room room;
     private List<Teacher> teachers;
     private Subject subject;

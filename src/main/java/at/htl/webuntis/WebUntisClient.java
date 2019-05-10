@@ -6,7 +6,6 @@ import at.htl.webuntis.exception.WebUntisException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.jboss.resteasy.util.Base64;
 
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
@@ -36,7 +35,7 @@ public class WebUntisClient {
     public WebUntisClient(String prefix, String school, String username, String password) {
         this.prefix = prefix;
         this.school = school;
-        this.encodedSchool = Base64.encodeBytes(school.getBytes());
+        this.encodedSchool = Base64.getEncoder().encodeToString(school.getBytes());
         this.username = username;
         this.password = password;
         this.BASE_URL = "https://" + prefix + ".webuntis.com/WebUntis/jsonrpc.do";

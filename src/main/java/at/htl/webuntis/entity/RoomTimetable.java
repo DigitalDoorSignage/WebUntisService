@@ -1,5 +1,6 @@
 package at.htl.webuntis.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -8,14 +9,19 @@ import javax.json.Json;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
+import javax.json.bind.annotation.JsonbTransient;
 import java.util.*;
 
 public class RoomTimetable {
     private Room room;
+    @JsonIgnore
     private List<Teacher> teachers;
+    @JsonIgnore
     private List<Subject> subjects;
+    @JsonIgnore
     private List<Klass> klasses;
     private Map<String, List<Lesson>> lessonsPerDay;
+    @JsonIgnore
     private Long lastImportTimestamp;
 
     public RoomTimetable(Room room, List<Teacher> teachers, List<Subject> subjects, List<Klass> klasses, Map<String, List<Lesson>> lessonsPerDay, Long lastImportTimestamp) {
