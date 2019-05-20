@@ -44,7 +44,7 @@ public class WebUntisService {
     public void start() throws URISyntaxException, FileNotFoundException {
         String configUrl = getClass().getResource("/config.yaml").toString().replace("vfs:/", "file:/");
 
-        Map<String, Object> config = new Yaml().load(
+        Map<String, String> config = new Yaml().load(
                 new FileInputStream(new File(new URI(configUrl)))
         );
 
