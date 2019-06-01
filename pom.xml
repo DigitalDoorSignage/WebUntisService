@@ -33,9 +33,9 @@
             <version>2.9.8</version>
         </dependency>
         <dependency>
-            <groupId>org.yaml</groupId>
-            <artifactId>snakeyaml</artifactId>
-            <version>1.21</version>           
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.21</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
