@@ -15,6 +15,10 @@ public class MemCacheItem<TValue> {
         return updatedAt;
     }
 
+    public void setUpdatedAt(Long updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
     public TValue getValue() {
         return value;
     }
