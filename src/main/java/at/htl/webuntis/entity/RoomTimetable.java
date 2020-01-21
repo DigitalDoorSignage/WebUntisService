@@ -10,6 +10,7 @@ import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
 import javax.json.bind.annotation.JsonbTransient;
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class RoomTimetable {
@@ -143,5 +144,20 @@ public class RoomTimetable {
         }
 
         return null;
+    }
+
+    public Lesson getCurrentLesson() {
+        LocalDateTime now = LocalDateTime.now();
+        String currentDate = String.format("%04d%02d%02d", now.getYear(), now.getMonthValue(), now.getDayOfMonth());
+        int time = now.getHour() * 100 + now.getMinute();
+
+        List<Lesson> lessons = this.lessonsPerDay.get(currentDate);
+
+        for (Lesson l : lessons) {
+            if(l.getStartTime() <= time && time <= l.getEndTime())
+                return l;
+        }
+        
+        return new Lesson();
     }
 }

@@ -26,8 +26,8 @@ public class WebUntisService {
     public WebUntisService() {
         lastImportTime = null;
 
-
         updateCheckerService = Executors.newScheduledThreadPool(1);
+
     }
 
     public void loadTimetables(){

@@ -25,6 +25,6 @@ public class StateEndpoint {
             return Response.status(404).build();
         }
 
-        return Response.ok(optItem.get().getValue()).build();
+        return Response.ok(optItem.get().getValue().getCurrentLesson()).build();
     }
 }
