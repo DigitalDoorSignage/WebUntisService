@@ -161,7 +161,9 @@ public class RoomTimetable {
 
         if(currentLesson != null) {
             int endTime = currentLesson.getEndTime();
-            if(!currentLesson.getDate().equals(currentDate) || endTime < time){
+            int startTime = currentLesson.getStartTime();
+
+            if(!currentLesson.getDate().equals(currentDate) || endTime < time  || startTime > time){
                 this.currentLesson = getLessonAtTime(lessons, time);
             }
             else {
