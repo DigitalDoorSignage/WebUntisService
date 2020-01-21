@@ -114,7 +114,7 @@ public class WebUntisClient {
             JsonNode body = objectMapper.readTree(response.readEntity(String.class));
             return RoomTimetable.parse(room, body);
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
 
         return null;

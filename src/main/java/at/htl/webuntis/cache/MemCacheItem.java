@@ -1,5 +1,6 @@
 package at.htl.webuntis.cache;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class MemCacheItem<TValue> {
@@ -15,8 +16,8 @@ public class MemCacheItem<TValue> {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Long updatedAt) {
-        this.updatedAt = updatedAt;
+    public void updated(){
+        this.updatedAt = new Date().getTime();
     }
 
     public TValue getValue() {

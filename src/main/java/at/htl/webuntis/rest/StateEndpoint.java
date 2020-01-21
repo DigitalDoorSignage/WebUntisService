@@ -25,6 +25,10 @@ public class StateEndpoint {
             return Response.status(404).build();
         }
 
-        return Response.ok(optItem.get().getValue().getCurrentLesson()).build();
+        RoomTimetable rt = optItem.get().getValue();
+
+        rt.updateCurrentLesson();
+
+        return Response.ok(rt.getCurrentLesson()).build();
     }
 }

@@ -1,8 +1,6 @@
 package at.htl.webuntis.cache;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class MemCache<TKey, TValue> {
     private Map<TKey, MemCacheItem<TValue>> items;
@@ -25,4 +23,9 @@ public class MemCache<TKey, TValue> {
                 ? Optional.ofNullable(items.get(key))
                 : Optional.empty();
     }
+
+    public List<MemCacheItem<TValue>> getItems(){
+        return new ArrayList(this.items.values());
+    }
+
 }

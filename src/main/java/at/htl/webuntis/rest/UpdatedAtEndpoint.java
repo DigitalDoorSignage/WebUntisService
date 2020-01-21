@@ -26,4 +26,12 @@ public class UpdatedAtEndpoint {
 
         return Response.ok(optItem.get().getUpdatedAt()).build();
     }
+
+    @GET
+    @Path("/config")
+    public Response config(@QueryParam("date") String date, @QueryParam("time") Integer time){
+        RoomTimetable.fakeDate = date;
+        RoomTimetable.fakeTime = time;
+        return Response.ok(String.format("Date: %s Time: %d", RoomTimetable.fakeDate, RoomTimetable.fakeTime)).build();
+    }
 }

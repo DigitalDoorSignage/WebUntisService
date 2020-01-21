@@ -2,6 +2,7 @@ package at.htl;
 
 import at.htl.webuntis.cache.RoomTimetableCache;
 import at.htl.webuntis.WebUntisClient;
+import at.htl.webuntis.entity.RoomTimetable;
 import org.yaml.snakeyaml.Yaml;
 
 import javax.ejb.Stateful;
@@ -60,6 +61,12 @@ public class WebUntisService {
 
     private void checkForUpdate(){
         try{
+            this.cache.getItems().forEach(item -> {
+                RoomTimetable rt = item.getValue();
+                if(rt.updateCurrentLesson()){
+                    item.updated();
+                }
+            });
             Long latestImportTime = webUntisClient.getLatestImportTime();
             if(lastImportTime == null || lastImportTime < latestImportTime){
                 loadTimetables();

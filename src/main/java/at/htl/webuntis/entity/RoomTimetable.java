@@ -14,7 +14,10 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public class RoomTimetable {
+    public static String fakeDate;
+    public static Integer fakeTime;
     private Room room;
+    private Lesson currentLesson;
     @JsonIgnore
     private List<Teacher> teachers;
     @JsonIgnore
@@ -146,18 +149,57 @@ public class RoomTimetable {
         return null;
     }
 
-    public Lesson getCurrentLesson() {
-        LocalDateTime now = LocalDateTime.now();
-        String currentDate = String.format("%04d%02d%02d", now.getYear(), now.getMonthValue(), now.getDayOfMonth());
-        int time = now.getHour() * 100 + now.getMinute();
+    public boolean updateCurrentLesson(){
+        int time = getCurrentTime();
+        System.out.println(time);
+        String currentDate = getCurrentDate();
 
         List<Lesson> lessons = this.lessonsPerDay.get(currentDate);
 
-        for (Lesson l : lessons) {
-            if(l.getStartTime() <= time && time <= l.getEndTime())
-                return l;
+        if(lessons == null)
+            return false;
+
+        if(currentLesson != null) {
+            int endTime = currentLesson.getEndTime();
+            if(!currentLesson.getDate().equals(currentDate) || endTime < time){
+                this.currentLesson = getLessonAtTime(lessons, time);
+            }
+            else {
+                return false;
+            }
         }
-        
-        return new Lesson();
+        else {
+            this.currentLesson = getLessonAtTime(lessons, time);
+        }
+
+        return true;
+    }
+
+    private Lesson getLessonAtTime(List<Lesson> lessons, int time) {
+        for (Lesson l : lessons) {
+            if(l.getStartTime() <= time && time <= l.getEndTime()){
+                return l;
+            }
+        }
+        return null;
+    }
+
+    private int getCurrentTime(){
+        if(fakeTime != null){
+            return fakeTime;
+        }
+        LocalDateTime now = LocalDateTime.now();
+        return now.getHour() * 100 + now.getMinute();
+    }
+    private String getCurrentDate(){
+        if(fakeDate != null){
+            return fakeDate;
+        }
+        LocalDateTime now = LocalDateTime.now();
+        return String.format("%04d%02d%02d", now.getYear(), now.getMonthValue(), now.getDayOfMonth());
+    }
+
+    public Lesson getCurrentLesson() {
+        return this.currentLesson;
     }
 }

@@ -7,13 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b859b17-f570-4144-a188-3407636d81d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/WebUntisService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebUntisService.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/WebUntisService_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/WebUntisService_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/WebUntisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/WebUntisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/WebUntisClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/WebUntisClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/MemCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/MemCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/MemCacheItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/MemCacheItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/RoomTimetable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/RoomTimetable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/StateEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/StateEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/UpdatedAtEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/UpdatedAtEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/webuntis/cache/MemCacheItemTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/webuntis/cache/MemCacheTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/webuntis/entity/RoomTimetableTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +81,18 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="JBoss Server.JBoss 15.0.1.Final">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -173,29 +189,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.22643171" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="JBoss Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -250,43 +243,29 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tests" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579517636551">
-      <screen x="70" y="27" width="1210" height="693" />
-    </state>
-    <state x="137" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1210.693@70.27.1210.693" timestamp="1579517636551" />
-    <state width="877" height="242" key="GridCell.Tab.0.bottom" timestamp="1579519122322">
-      <screen x="70" y="27" width="1210" height="693" />
-    </state>
-    <state width="877" height="242" key="GridCell.Tab.0.bottom/70.27.1210.693@70.27.1210.693" timestamp="1579519122322" />
-    <state width="877" height="242" key="GridCell.Tab.0.center" timestamp="1579519122321">
-      <screen x="70" y="27" width="1210" height="693" />
-    </state>
-    <state width="877" height="242" key="GridCell.Tab.0.center/70.27.1210.693@70.27.1210.693" timestamp="1579519122321" />
-    <state width="877" height="242" key="GridCell.Tab.0.left" timestamp="1579519122320">
-      <screen x="70" y="27" width="1210" height="693" />
-    </state>
-    <state width="877" height="242" key="GridCell.Tab.0.left/70.27.1210.693@70.27.1210.693" timestamp="1579519122320" />
-    <state width="877" height="242" key="GridCell.Tab.0.right" timestamp="1579519122322">
-      <screen x="70" y="27" width="1210" height="693" />
-    </state>
-    <state width="877" height="242" key="GridCell.Tab.0.right/70.27.1210.693@70.27.1210.693" timestamp="1579519122322" />
-    <state width="877" height="242" key="GridCell.Tab.1.bottom" timestamp="1579519122123">
-      <screen x="70" y="27" width="1210" height="693" />
-    </state>
-    <state width="877" height="242" key="GridCell.Tab.1.bottom/70.27.1210.693@70.27.1210.693" timestamp="1579519122123" />
-    <state width="877" height="242" key="GridCell.Tab.1.center" timestamp="1579519122123">
-      <screen x="70" y="27" width="1210" height="693" />
-    </state>
-    <state width="877" height="242" key="GridCell.Tab.1.center/70.27.1210.693@70.27.1210.693" timestamp="1579519122123" />
-    <state width="877" height="242" key="GridCell.Tab.1.left" timestamp="1579519122123">
-      <screen x="70" y="27" width="1210" height="693" />
-    </state>
-    <state width="877" height="242" key="GridCell.Tab.1.left/70.27.1210.693@70.27.1210.693" timestamp="1579519122123" />
-    <state width="877" height="242" key="GridCell.Tab.1.right" timestamp="1579519122123">
-      <screen x="70" y="27" width="1210" height="693" />
-    </state>
-    <state width="877" height="242" key="GridCell.Tab.1.right/70.27.1210.693@70.27.1210.693" timestamp="1579519122123" />
+    <state x="137" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="137" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1210.693@70.27.1210.693" />
+    <state width="877" height="242" key="GridCell.Tab.0.bottom" />
+    <state width="877" height="242" key="GridCell.Tab.0.bottom/70.27.1210.693@70.27.1210.693" />
+    <state width="877" height="242" key="GridCell.Tab.0.center" />
+    <state width="877" height="242" key="GridCell.Tab.0.center/70.27.1210.693@70.27.1210.693" />
+    <state width="877" height="242" key="GridCell.Tab.0.left" />
+    <state width="877" height="242" key="GridCell.Tab.0.left/70.27.1210.693@70.27.1210.693" />
+    <state width="877" height="242" key="GridCell.Tab.0.right" />
+    <state width="877" height="242" key="GridCell.Tab.0.right/70.27.1210.693@70.27.1210.693" />
+    <state width="877" height="242" key="GridCell.Tab.1.bottom" />
+    <state width="877" height="242" key="GridCell.Tab.1.bottom/70.27.1210.693@70.27.1210.693" />
+    <state width="877" height="242" key="GridCell.Tab.1.center" />
+    <state width="877" height="242" key="GridCell.Tab.1.center/70.27.1210.693@70.27.1210.693" />
+    <state width="877" height="242" key="GridCell.Tab.1.left" />
+    <state width="877" height="242" key="GridCell.Tab.1.left/70.27.1210.693@70.27.1210.693" />
+    <state width="877" height="242" key="GridCell.Tab.1.right" />
+    <state width="877" height="242" key="GridCell.Tab.1.right/70.27.1210.693@70.27.1210.693" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
