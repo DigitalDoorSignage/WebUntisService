@@ -7,10 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b859b17-f570-4144-a188-3407636d81d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/at/htl/webuntis/cache/MemCacheItemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/at/htl/webuntis/cache/MemCacheTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WebUntisService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebUntisService.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/WebUntisService_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/WebUntisService_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,136 +22,25 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/WebUntisService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/WebUntisResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/exception/WebUntisException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/WebUntisClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="899">
-              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-              <folding>
-                <element signature="n#!!doc;n#buildRequestBody#0;n#WebUntisClient#0" />
-                <element signature="n#!!doc;n#getPrefix#0;n#WebUntisClient#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/Room.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/RoomTimetable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/IWebUntisResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/WebUntisException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/WebUntisResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/Timetable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/Klass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/Subject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/Lesson.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/RoomTimetable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/WebUntisClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/WebUntisResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/exception/WebUntisException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/RoomTimetableTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/RestConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/TimetableStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/RoomTimetableStore.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/MemCacheItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/TimestampEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/WebUntisClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/MemCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/business/InitBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/RoomTimetableCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/UpdatedAtEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/StateEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/RoomTimetable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/Lesson.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/at/htl/WebUntisService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.yaml" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </list>
-    </option>
+  <component name="JavaeeView">
+    <option name="frameworksView" value="false" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -158,126 +49,16 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="webuntisclient" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="1027" />
-  </component>
+  <component name="ProjectId" id="1SK03vdnIzNsbXlplK8Z7ql1iFX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="WebUntisService" type="58d84e3e:PackageViewProjectNode" />
-              <item name="webuntisclient" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="WebUntisService" type="58d84e3e:PackageViewProjectNode" />
-              <item name="webuntisclient" type="616d4139:PackageViewModuleNode" />
-              <item name="at.htl" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="WebUntisService" type="58d84e3e:PackageViewProjectNode" />
-              <item name="webuntisclient" type="616d4139:PackageViewModuleNode" />
-              <item name="at.htl" type="1f31426a:PackageElementNode" />
-              <item name="webuntis" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="WebUntisService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebUntisService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUntisService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebUntisService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUntisService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebUntisService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUntisService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebUntisService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUntisService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebUntisService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="htl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUntisService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebUntisService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="htl" type="462c0819:PsiDirectoryNode" />
-              <item name="webuntis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUntisService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebUntisService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="htl" type="462c0819:PsiDirectoryNode" />
-              <item name="webuntis" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUntisService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebUntisService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="htl" type="462c0819:PsiDirectoryNode" />
-              <item name="webuntis" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549280828782" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -291,6 +72,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="at.htl.webuntis.cache" />
       <recent name="at.htl.webuntis.entity" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -399,12 +181,57 @@
         </option>
       </method>
     </configuration>
+    <configuration name="All in WebUntisService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WebUntisService" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemCacheTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WebUntisService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.htl.webuntis.cache.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.htl.webuntis.cache" />
+      <option name="MAIN_CLASS_NAME" value="at.htl.webuntis.cache.MemCacheTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemCacheTest.settingExistingValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WebUntisService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.htl.webuntis.cache.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.htl.webuntis.cache" />
+      <option name="MAIN_CLASS_NAME" value="at.htl.webuntis.cache.MemCacheTest" />
+      <option name="METHOD_NAME" value="settingExistingValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JBoss Server.JBoss 15.0.1.Final" />
+      <item itemvalue="JUnit.MemCacheTest" />
+      <item itemvalue="JUnit.MemCacheTest.settingExistingValue" />
+      <item itemvalue="JUnit.All in WebUntisService" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in WebUntisService" />
+        <item itemvalue="JUnit.MemCacheTest.settingExistingValue" />
+        <item itemvalue="JUnit.MemCacheTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -440,100 +267,34 @@
       <workItem from="1549311528835" duration="119000" />
       <workItem from="1557222416802" duration="15908000" />
       <workItem from="1558345897793" duration="700000" />
+      <workItem from="1571299079342" duration="5394000" />
+      <workItem from="1574698881243" duration="97000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87105000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="140" y="43" width="2420" height="1397" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30017152" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.47697368" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991228" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32894737" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32894737" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Application Servers" order="14" visible="true" weight="0.3280522" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.32976905" />
-      <window_info anchor="right" id="JSF" order="9" />
-      <window_info anchor="right" id="CDI" order="10" />
-      <window_info anchor="right" id="Bean Validation" order="11" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Web" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.32844934" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.47761193" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.32976905" />
-      <window_info anchor="right" id="JSF" order="9" />
-      <window_info anchor="right" id="CDI" order="10" />
-      <window_info anchor="right" id="Bean Validation" order="11" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/WebUntisClient.java</url>
-          <line>122</line>
-          <properties />
-          <option name="timeStamp" value="78" />
+          <line>73</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -640,294 +401,6 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/mashape/unirest/unirest-java/1.4.9/unirest-java-1.4.9.jar!/com/mashape/unirest/http/HttpClientHelper.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/mashape/unirest/unirest-java/1.4.9/unirest-java-1.4.9.jar!/com/mashape/unirest/request/BaseRequest.class" />
-    <entry file="file://$PROJECT_DIR$/WebUntisClient.iml" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-client/3.0.2.Final/resteasy-client-3.0.2.Final.jar!/org/jboss/resteasy/client/jaxrs/internal/ClientWebTarget.class" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/Function.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/Predicate.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/stream/ReferencePipeline.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ArrayList.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/stream/ForEachOps.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/RoomTimetableTest.java" />
-    <entry file="jar://$USER_HOME$/.sdkman/candidates/java/8.0.191-oracle/src.zip!/java/util/function/Predicate.java" />
-    <entry file="uml://JAVA/at.htl.webuntis">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>at.htl.webuntis</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">at.htl.webuntis.exception</node>
-            <node x="0.0" y="103.0">at.htl.webuntis.WebUntisClient</node>
-            <node x="0.0" y="206.0">at.htl.webuntis.entity</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-121.0" y="10.0" />
-          <SelectedNodes>
-            <node>at.htl.webuntis.exception</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/at.htl.webuntis.entity.Klass">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>at.htl.webuntis.entity.Klass</OriginalElement>
-          <nodes>
-            <node x="535.0" y="796.0">at.htl.webuntis.entity.RoomTimetable</node>
-            <node x="391.0" y="530.0">at.htl.webuntis.entity.Klass</node>
-            <node x="1062.0" y="217.0">at.htl.webuntis.entity.Room</node>
-            <node x="284.0" y="0.0">at.htl.webuntis.entity.Lesson</node>
-            <node x="0.0" y="661.0">at.htl.webuntis.entity.Teacher</node>
-            <node x="745.0" y="360.0">at.htl.webuntis.entity.Subject</node>
-            <node x="0.0" y="1175.0">at.htl.webuntis.entity.WebUntisResponse</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="at.htl.webuntis.entity.RoomTimetable" target="at.htl.webuntis.entity.Room">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="at.htl.webuntis.entity.Lesson" target="at.htl.webuntis.entity.Klass">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="at.htl.webuntis.entity.RoomTimetable" target="at.htl.webuntis.entity.Subject">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="at.htl.webuntis.entity.RoomTimetable" target="at.htl.webuntis.entity.Lesson">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="at.htl.webuntis.entity.Lesson" target="at.htl.webuntis.entity.Subject">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="at.htl.webuntis.entity.RoomTimetable" target="at.htl.webuntis.entity.Teacher">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="at.htl.webuntis.entity.Lesson" target="at.htl.webuntis.entity.Room">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="at.htl.webuntis.entity.RoomTimetable" target="at.htl.webuntis.entity.Klass">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="at.htl.webuntis.entity.Lesson" target="at.htl.webuntis.entity.Teacher">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="-445.0" y="414.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/WebUntisResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/Klass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/exception/WebUntisException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/RoomTimetableStore.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/RestConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/MemCacheItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/MemCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/business/InitBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/cache/RoomTimetableCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/StateEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/WebUntisClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc;n#buildRequestBody#0;n#WebUntisClient#0" />
-            <element signature="n#!!doc;n#getPrefix#0;n#WebUntisClient#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/RoomTimetable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/entity/Lesson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/webuntis/rest/UpdatedAtEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roomtimetable.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/htl/WebUntisService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="8944">
-            <caret line="615" column="1" selection-start-line="615" selection-start-column="1" selection-end-line="615" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
