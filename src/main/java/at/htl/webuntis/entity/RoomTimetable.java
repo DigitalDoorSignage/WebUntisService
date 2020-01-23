@@ -151,13 +151,14 @@ public class RoomTimetable {
 
     public boolean updateCurrentLesson(){
         int time = getCurrentTime();
-        System.out.println(time);
         String currentDate = getCurrentDate();
 
         List<Lesson> lessons = this.lessonsPerDay.get(currentDate);
 
-        if(lessons == null)
+        if(lessons == null){
+            this.currentLesson = new Lesson();
             return false;
+        }
 
         if(currentLesson != null) {
             int endTime = currentLesson.getEndTime();
