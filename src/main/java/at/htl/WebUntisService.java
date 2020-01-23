@@ -45,7 +45,7 @@ public class WebUntisService {
     public void start() throws URISyntaxException, FileNotFoundException {
         String configUrl = getClass().getResource("/config.yaml").toString().replace("vfs:/", "file:/");
 
-        Map<String, String> config = new Yaml().load(
+        Map<String, Object> config = new Yaml().load(
                 new FileInputStream(new File(new URI(configUrl)))
         );
 
@@ -56,7 +56,7 @@ public class WebUntisService {
                 (String) config.get("password")
         );
         webUntisClient.login();
-        updateCheckerService.scheduleAtFixedRate(this::checkForUpdate, 0, Integer.parseInt(config.getOrDefault("delay", "30")), TimeUnit.SECONDS);
+        updateCheckerService.scheduleAtFixedRate(this::checkForUpdate, 0, (Integer) config.getOrDefault("delay", 30), TimeUnit.SECONDS);
     }
 
     private void checkForUpdate(){
