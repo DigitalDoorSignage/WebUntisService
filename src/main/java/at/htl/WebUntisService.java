@@ -39,6 +39,7 @@ public class WebUntisService {
                  .forEach(r -> {
                      String name = r.getRoom().getLongName();
                      cache.set(name, r);
+                     cache.set(r.getRoom().getName(), r);
                  });
     }
 
@@ -55,8 +56,9 @@ public class WebUntisService {
                 (String) config.get("username"),
                 (String) config.get("password")
         );
-        webUntisClient.login();
-        updateCheckerService.scheduleAtFixedRate(this::checkForUpdate, 0, (Integer) config.getOrDefault("delay", 30), TimeUnit.SECONDS);
+        if(webUntisClient.login()){
+            updateCheckerService.scheduleAtFixedRate(this::checkForUpdate, 0, (Integer) config.getOrDefault("delay", 30), TimeUnit.SECONDS);
+        }
     }
 
     private void checkForUpdate(){

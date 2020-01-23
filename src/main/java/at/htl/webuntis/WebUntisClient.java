@@ -45,10 +45,10 @@ public class WebUntisClient {
     }
 
 
-    public void login(){
+    public Boolean login(){
         Map<String, String> queryParams = new HashMap<>();
         queryParams.put("school", school);
-        request(
+        return request(
                 "authenticate",
                 body -> body.set("params", objectMapper.createObjectNode()
                         .put("user", username)
@@ -56,7 +56,8 @@ public class WebUntisClient {
                         .put("password", password)
                 ),
                 result -> {
-                    sessionId = result.get("sessionId").asText(); },
+                    sessionId = result.get("sessionId").asText();
+                    return true; },
                 queryParams
         );
     }
@@ -179,7 +180,7 @@ public class WebUntisClient {
             JsonNode result = parseResponse(response).getResult();
             responseHandler.accept(result);
         } catch (IOException e) {
-            e.printStackTrace();
+            new WebUntisException("Webuntis crashed", response.getStatus()).printStackTrace();
         } catch (WebUntisException e) {
             e.printStackTrace();
         }
@@ -193,7 +194,7 @@ public class WebUntisClient {
             JsonNode result = parseResponse(response).getResult();
             return responseHandler.apply(result);
         } catch (IOException e) {
-            e.printStackTrace();
+            new WebUntisException("Webuntis crashed", response.getStatus()).printStackTrace();
         } catch (WebUntisException e) {
             e.printStackTrace();
         }
