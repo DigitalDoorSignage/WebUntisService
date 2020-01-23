@@ -2,6 +2,7 @@ package at.htl.webuntis.rest;
 
 import at.htl.webuntis.cache.MemCacheItem;
 import at.htl.webuntis.cache.RoomTimetableCache;
+import at.htl.webuntis.entity.Lesson;
 import at.htl.webuntis.entity.RoomTimetable;
 
 import javax.ws.rs.GET;
@@ -28,7 +29,11 @@ public class StateEndpoint {
         RoomTimetable rt = optItem.get().getValue();
 
         rt.updateCurrentLesson();
+        Lesson currentLesson = rt.getCurrentLesson();
 
-        return Response.ok(rt.getCurrentLesson()).build();
+        if(currentLesson == null)
+            currentLesson = new Lesson();
+
+        return Response.ok(currentLesson).build();
     }
 }

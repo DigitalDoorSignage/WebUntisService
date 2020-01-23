@@ -155,10 +155,8 @@ public class RoomTimetable {
 
         List<Lesson> lessons = this.lessonsPerDay.get(currentDate);
 
-        if(lessons == null){
-            this.currentLesson = new Lesson();
+        if(lessons == null)
             return false;
-        }
 
         if(currentLesson != null) {
             int endTime = currentLesson.getEndTime();
