@@ -56,7 +56,7 @@ public class WebUntisService {
                 (String) config.get("password")
         );
         webUntisClient.login();
-        updateCheckerService.scheduleAtFixedRate(this::checkForUpdate, 0, 30, TimeUnit.SECONDS);
+        updateCheckerService.scheduleAtFixedRate(this::checkForUpdate, 0, Integer.parseInt(config.getOrDefault("delay", "30")), TimeUnit.SECONDS);
     }
 
     private void checkForUpdate(){
